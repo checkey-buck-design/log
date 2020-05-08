@@ -1,4 +1,4 @@
-module github.com/apex/log
+module github.com/checkey-buck-design/log
 
 go 1.12
 
