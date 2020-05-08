@@ -22,6 +22,7 @@ type Entry struct {
 	Message   string    `json:"message"`
 	start     time.Time
 	fields    []Fields
+	err       error
 }
 
 // NewEntry returns a new entry for `log`.
@@ -52,6 +53,7 @@ func (e *Entry) WithField(key string, value interface{}) *Entry {
 // The given error may implement .Fielder, if it does the method
 // will add all its `.Fields()` into the returned entry.
 func (e *Entry) WithError(err error) *Entry {
+	e.err = err
 	ctx := e.WithField("error", err.Error())
 
 	if s, ok := err.(stackTracer); ok {
@@ -74,6 +76,11 @@ func (e *Entry) WithError(err error) *Entry {
 	}
 
 	return ctx
+}
+
+//
+func (e *Entry) Err() error {
+	return e.err
 }
 
 // Debug level message.
