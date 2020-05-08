@@ -53,7 +53,6 @@ func (e *Entry) WithField(key string, value interface{}) *Entry {
 // The given error may implement .Fielder, if it does the method
 // will add all its `.Fields()` into the returned entry.
 func (e *Entry) WithError(err error) *Entry {
-	e.err = err
 	ctx := e.WithField("error", err.Error())
 
 	if s, ok := err.(stackTracer); ok {
@@ -74,6 +73,8 @@ func (e *Entry) WithError(err error) *Entry {
 	if f, ok := err.(Fielder); ok {
 		ctx = ctx.WithFields(f.Fields())
 	}
+
+	ctx.err = err
 
 	return ctx
 }
@@ -175,5 +176,6 @@ func (e *Entry) finalize(level Level, msg string) *Entry {
 		Level:     level,
 		Message:   msg,
 		Timestamp: Now(),
+		err: e.err,
 	}
 }
