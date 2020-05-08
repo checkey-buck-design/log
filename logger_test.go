@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/apex/log"
-	"github.com/apex/log/handlers/discard"
-	"github.com/apex/log/handlers/memory"
+	"github.com/checkey-buck-design/log"
+	"github.com/checkey-buck-design/log/handlers/discard"
+	"github.com/checkey-buck-design/log/handlers/memory"
 	"github.com/stretchr/testify/assert"
 )
 

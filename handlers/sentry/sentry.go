@@ -1,7 +1,7 @@
 package sentry
 
 import (
-	"github.com/apex/log"
+	"github.com/checkey-buck-design/log"
 	"github.com/getsentry/sentry-go"
 	"reflect"
 	"time"

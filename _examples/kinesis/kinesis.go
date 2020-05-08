@@ -4,10 +4,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/apex/log"
-	"github.com/apex/log/handlers/kinesis"
-	"github.com/apex/log/handlers/multi"
-	"github.com/apex/log/handlers/text"
+	"github.com/checkey-buck-design/log"
+	"github.com/checkey-buck-design/log/handlers/kinesis"
+	"github.com/checkey-buck-design/log/handlers/multi"
+	"github.com/checkey-buck-design/log/handlers/text"
 )
 
 func main() {

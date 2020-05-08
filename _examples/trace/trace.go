@@ -4,8 +4,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/apex/log"
-	"github.com/apex/log/handlers/text"
+	"github.com/checkey-buck-design/log"
+	"github.com/checkey-buck-design/log/handlers/text"
 )
 
 func work(ctx log.Interface) (err error) {

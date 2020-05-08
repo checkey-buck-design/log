@@ -2,7 +2,7 @@ package sentry
 
 import (
 	"errors"
-	"github.com/apex/log"
+	"github.com/checkey-buck-design/log"
 	"testing"
 )
 

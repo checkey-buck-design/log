@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/apex/log"
-	"github.com/apex/logs/go/logs"
+	"github.com/checkey-buck-design/log"
+	"github.com/checkey-buck-design/logs/go/logs"
 )
 
 // TODO: periodic buffering

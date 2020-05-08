@@ -5,8 +5,8 @@ import (
 
 	"github.com/tj/assert"
 
-	"github.com/apex/log"
-	"github.com/apex/log/handlers/apexlogs"
+	"github.com/checkey-buck-design/log"
+	"github.com/checkey-buck-design/log/handlers/apexlogs"
 )
 
 func Test(t *testing.T) {
